@@ -1,24 +1,61 @@
-# Ember-link-action
+# Ember Link Action
 
-This README outlines the details of collaborating on this Ember addon.
+An Ember CLI addon. Allows to combine `{{link-to}}` helper with firing an action.
 
-## Installation
+It is useful when you want to fire an action at the same time when user transitions to other route by clicking `{{link-to}}`. It is ok for SEO solution.
+
+# Usage
+
+You can pass closure action as `invokeAction` attribute of `{{link-to}}` component:
+
+``` hbs
+{{#link-to 'other-route' invokeAction=(action 'testAction')}}
+Link to other route
+{{/link-to}}
+```
+
+You can also use string name instead of closure action:
+
+``` hbs
+{{#link-to 'other-route' invokeAction='testAction'}}
+Link to other route
+{{/link-to}}
+```
+
+# Compatibility
+
+Confirmed that it works fine with Ember versions:
+
+- 2.0.2
+- 2.1.0-beta.4
+
+# Installation
+
+Run following Ember CLI command in your project directory:
+
+``` bash
+ember install ember-link-action
+```
+
+Done.
+
+## Contributing - Installation
 
 * `git clone` this repository
 * `npm install`
 * `bower install`
 
-## Running
+## Contributing - Running
 
 * `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Tests
+## Contributing - Running Tests
 
 * `ember test`
 * `ember test --server`
 
-## Building
+## Contributing - Building
 
 * `ember build`
 
