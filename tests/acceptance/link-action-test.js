@@ -77,3 +77,28 @@ test('clicking {{link-to}} with action name specified correctly transition to ot
     assert.equal(currentURL(), '/other-route');
   });
 });
+
+test('action parameters can be passed to invoked action', assert => {
+  assert.expect(2);
+
+  const registry = getRegistry();
+
+  registry.register('controller:link-action', Ember.Controller.extend({
+    actions: {
+      testAction(param1, param2) {
+        assert.equal(param1, 'value1', 'param1 has value of value1');
+        assert.equal(param2, 'value2', 'param2 has value of value2');
+      }
+    }
+  }));
+
+  registry.register('template:link-action', precompileTemplate(`
+    {{#link-to 'other-route' invokeAction=(action 'testAction' 'value1' 'value2')}}
+      Link to other route
+    {{/link-to}}
+  `));
+
+  visit('/link-action');
+
+  click('a');
+});
