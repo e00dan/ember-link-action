@@ -22,6 +22,14 @@ Link to other route
 {{/link-to}}
 ```
 
+To pass parameters to action you can use:
+
+``` hbs
+{{#link-to 'other-route' invokeAction=(action 'testAction' param1 param2)}}
+  Link to other route
+{{/link-to}}
+```
+
 # Compatibility
 
 Confirmed that it works fine with Ember versions:
