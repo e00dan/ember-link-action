@@ -2,7 +2,7 @@
 
 An Ember CLI addon. Allows to combine `{{link-to}}` helper with firing an action.
 
-It is useful when you want to fire an action at the same time when user transitions to other route by clicking `{{link-to}}`. It is ok for SEO solution.
+It is useful when you want to fire an action at the same time when user transitions to other route by clicking `{{link-to}}`. **It is OK for SEO solution.**
 
 # Usage
 
@@ -42,11 +42,9 @@ Confirmed that it works with release, beta, canary Ember versions:
 
 Run following Ember CLI command in your project directory:
 
-``` bash
+``` sh
 ember install ember-link-action
 ```
-
-Done.
 
 ## Contributing - Installation
 

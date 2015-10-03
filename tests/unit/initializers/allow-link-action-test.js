@@ -2,22 +2,55 @@ import Ember from 'ember';
 import { initialize } from '../../../initializers/allow-link-action';
 import { module, test } from 'qunit';
 
-var registry, application;
+let registry, application;
 
 module('Unit | Initializer | allow link action', {
-  beforeEach: function() {
-    Ember.run(function() {
+  beforeEach() {
+    Ember.run(() => {
       application = Ember.Application.create();
-      registry = application.registry;
+      registry    = application.registry;
+
       application.deferReadiness();
     });
   }
 });
 
-// Replace this with your real tests.
-test('it works', function(assert) {
-  initialize(registry, application);
+test('it works', assert => {
+  assert.expect(4);
 
-  // you would normally confirm the results of the initializer here
-  assert.ok(true);
+  const done = assert.async();
+
+  const oldLinkTo = Ember.LinkComponent.create();
+
+  assert.equal(
+    oldLinkTo.willDestroyElement.name,
+    'K',
+    'will destroy element hook is not yet overriden'
+  );
+
+  assert.equal(
+    oldLinkTo._sendInvokeAction,
+    undefined,
+    '_sendInvokeAction should not be defined yet'
+  );
+
+  window.setTimeout(() => {
+    console.log('inside window set timeout');
+    initialize(registry, application);
+
+    const newLinkTo = Ember.LinkComponent.create();
+
+    assert.equal(
+      newLinkTo.willDestroyElement.name,
+      'willDestroyElement',
+      'will destroy element hook is overriden'
+    );
+
+    assert.ok(
+      newLinkTo._sendInvokeAction,
+      '_sendInvokeAction should be defined now'
+    );
+
+    done();
+  }, 1000);
 });

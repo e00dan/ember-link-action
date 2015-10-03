@@ -10,10 +10,9 @@ export function initialize() {
       this._super(...arguments);
 
       // Map desired event name to invoke function
-      const eventName = this.get('eventName'),
-            attachedAction = this.get('invokeAction');
+      const eventName = this.get('eventName');
 
-      if (attachedAction) {
+      if (this.get('invokeAction')) {
         this.on(eventName, this, this._sendInvokeAction);
       }
 
