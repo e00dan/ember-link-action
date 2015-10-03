@@ -22,7 +22,7 @@ export function initialize() {
 
     willDestroyElement() {
       if (this.get('invokeAction')) {
-        this.on(this.get('eventName'), this, this._sendInvokeAction);
+        this.off(this.get('eventName'), this, this._sendInvokeAction);
       }
     }
   });
