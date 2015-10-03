@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export function initialize() {
   Ember.LinkComponent.reopen({
+    _sendInvokeAction() {
+      this.sendAction('invokeAction');
+    },
+
     init() {
       this._super(...arguments);
 
@@ -10,10 +14,16 @@ export function initialize() {
             attachedAction = this.get('invokeAction');
 
       if (attachedAction) {
-        this.on(eventName, () => this.sendAction('invokeAction'));
+        this.on(eventName, this, this._sendInvokeAction);
       }
 
       this.on(eventName, this, this._invoke);
+    },
+
+    willDestroyElement() {
+      if (this.get('invokeAction')) {
+        this.on(this.get('eventName'), this, this._sendInvokeAction);
+      }
     }
   });
 }

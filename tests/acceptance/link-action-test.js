@@ -1,74 +1,79 @@
-/* global getController */
+/* global getRegistry */
 
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from '../../tests/helpers/start-app';
 
+const precompileTemplate = Ember.HTMLBars.compile;
+
 module('Acceptance | link action', {
-  beforeEach: function() {
+  beforeEach() {
     this.application = startApp();
   },
 
-  afterEach: function() {
+  afterEach() {
     Ember.run(this.application, 'destroy');
   }
 });
 
-test('visiting /link-action', function(assert) {
-  assert.expect(1);
-
-  visit('/link-action');
-
-  andThen(function() {
-    assert.equal(currentURL(), '/link-action');
-  });
-});
-
-Ember.Test.registerHelper('getController',
-  function(app, controllerName) {
-    return app.__container__.lookup('controller:' + controllerName);
-  }
-);
-
+Ember.Test.registerHelper('getRegistry', app => app.registry);
 
 test('clicking {{link-to}} with closure action specified correctly transition to other route and triggers an action', function(assert) {
-  assert.expect(4);
+  assert.expect(3);
+
+  const registry = getRegistry();
+
+  registry.register('controller:link-action', Ember.Controller.extend({
+    actions: {
+      testAction() {
+        assert.ok('test action fired');
+      }
+    }
+  }));
+
+  registry.register('template:link-action', precompileTemplate(`
+    {{#link-to 'other-route' invokeAction=(action 'testAction')}}
+      Link to other route
+    {{/link-to}}
+  `));
 
   visit('/link-action');
 
-  andThen(function() {
-    assert.equal(currentURL(), '/link-action');
-  });
+  andThen(() => assert.equal(currentURL(), '/link-action'));
 
-  const controller = getController('link-action');
+  click('a');
 
-  assert.equal(controller.get('testActionFired'), false, `action didn't fire yet`);
-
-  click('#linkWithClosureAction');
-
-  andThen(function() {
-    assert.equal(controller.get('testActionFired'), true, 'action did fire');
-    assert.equal(currentURL(), '/other-route');
-  });
+  andThen(() => assert.equal(currentURL(), '/other-route'));
 });
 
 test('clicking {{link-to}} with action name specified correctly transition to other route and triggers an action', function(assert) {
-  assert.expect(4);
+  assert.expect(3);
+
+  const registry = getRegistry();
+
+  registry.register('controller:link-action', Ember.Controller.extend({
+    actions: {
+      testAction() {
+        assert.ok('test action fired');
+      }
+    }
+  }));
+
+  registry.register('template:link-action', precompileTemplate(`
+    {{#link-to 'other-route' invokeAction='testAction'}}
+      Link to other route
+    {{/link-to}}
+  `));
 
   visit('/link-action');
 
-  andThen(function() {
+  andThen(() => {
     assert.equal(currentURL(), '/link-action');
   });
 
-  const controller = getController('link-action');
+  click('a');
 
-  assert.equal(controller.get('testActionFired'), false, `action didn't fire yet`);
-
-  click('#linkWithActionName');
-
-  andThen(function() {
-    assert.equal(controller.get('testActionFired'), true, 'action did fire');
+  andThen(() => {
     assert.equal(currentURL(), '/other-route');
   });
 });
