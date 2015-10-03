@@ -34,6 +34,8 @@ test('it works', assert => {
     '_sendInvokeAction should not be defined yet'
   );
 
+  initialize(registry, application);
+
   // window.setTimeout(() => {
   //   console.log('inside window set timeout');
   //   initialize(registry, application);
