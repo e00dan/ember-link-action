@@ -1,4 +1,4 @@
-# Ember Link Action
+# Ember Link Action [![Build Status](https://travis-ci.org/Kuzirashi/ember-link-action.svg?branch=master)](https://travis-ci.org/Kuzirashi/ember-link-action)
 
 An Ember CLI addon. Allows to combine `{{link-to}}` helper with firing an action.
 
