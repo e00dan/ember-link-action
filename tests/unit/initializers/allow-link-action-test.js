@@ -1,38 +1,38 @@
-import Ember from 'ember';
+// import Ember from 'ember';
 //import { initialize } from '../../../initializers/allow-link-action';
-import { module, test } from 'qunit';
+//import { module, test } from 'qunit';
 
-let registry, application;
+// let registry, application;
+//
+// module('Unit | Initializer | allow link action', {
+//   beforeEach() {
+//     Ember.run(() => {
+//       application = Ember.Application.create();
+//       registry    = application.registry;
+//
+//       application.deferReadiness();
+//     });
+//   }
+// });
 
-module('Unit | Initializer | allow link action', {
-  beforeEach() {
-    Ember.run(() => {
-      application = Ember.Application.create();
-      registry    = application.registry;
-
-      application.deferReadiness();
-    });
-  }
-});
-
-test('it works', assert => {
-  assert.expect(2);
+// test('it works', assert => {
+//   assert.expect(2);
 
   //const done = assert.async();
 
-  const oldLinkTo = Ember.LinkComponent.create();
-
-  assert.equal(
-    oldLinkTo.willDestroyElement.name,
-    'K',
-    'will destroy element hook is not yet overriden'
-  );
-
-  assert.equal(
-    oldLinkTo._sendInvokeAction,
-    undefined,
-    '_sendInvokeAction should not be defined yet'
-  );
+  // const oldLinkTo = Ember.LinkComponent.create();
+  //
+  // assert.equal(
+  //   oldLinkTo.willDestroyElement.name,
+  //   'K',
+  //   'will destroy element hook is not yet overriden'
+  // );
+  //
+  // assert.equal(
+  //   oldLinkTo._sendInvokeAction,
+  //   undefined,
+  //   '_sendInvokeAction should not be defined yet'
+  // );
 
   //initialize(registry, application);
 
@@ -55,4 +55,4 @@ test('it works', assert => {
   //
   //   done();
   // }, 3000);
-});
+// });
