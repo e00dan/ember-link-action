@@ -32,10 +32,11 @@ To pass parameters to action you can use:
 
 # Compatibility
 
-Confirmed that it works fine with Ember versions:
+Confirmed that it works with release, beta, canary Ember versions:
 
 - 2.0.2
 - 2.1.0-beta.4
+- 2.2.0-canary+77f6fc86
 
 # Installation
 
