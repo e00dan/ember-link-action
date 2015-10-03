@@ -52,5 +52,5 @@ test('it works', assert => {
     );
 
     done();
-  }, 1000);
+  }, 3000);
 });
