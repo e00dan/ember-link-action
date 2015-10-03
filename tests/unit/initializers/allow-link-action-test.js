@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { initialize } from '../../../initializers/allow-link-action';
+//import { initialize } from '../../../initializers/allow-link-action';
 import { module, test } from 'qunit';
 
 let registry, application;
@@ -34,7 +34,7 @@ test('it works', assert => {
     '_sendInvokeAction should not be defined yet'
   );
 
-  initialize(registry, application);
+  //initialize(registry, application);
 
   // window.setTimeout(() => {
   //   console.log('inside window set timeout');
