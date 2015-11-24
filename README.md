@@ -1,4 +1,4 @@
-# Ember Link Action [![Build Status](https://travis-ci.org/Kuzirashi/ember-link-action.svg?branch=master)](https://travis-ci.org/Kuzirashi/ember-link-action)
+# Ember Link Action [![Build Status](https://travis-ci.org/Kuzirashi/ember-link-action.svg?branch=master)](https://travis-ci.org/Kuzirashi/ember-link-action) [![npm version](https://badge.fury.io/js/ember-link-action.svg)](https://badge.fury.io/js/ember-link-action) [![Ember Observer Score](http://emberobserver.com/badges/ember-link-action.svg)](http://emberobserver.com/addons/ember-link-action)
 
 An Ember CLI addon. Allows to combine `{{link-to}}` helper with firing an action.
 
@@ -10,7 +10,7 @@ You can pass closure action as `invokeAction` attribute of `{{link-to}}` compone
 
 ``` hbs
 {{#link-to 'other-route' invokeAction=(action 'testAction')}}
-Link to other route
+  Link to other route
 {{/link-to}}
 ```
 
@@ -18,7 +18,7 @@ You can also use string name instead of closure action:
 
 ``` hbs
 {{#link-to 'other-route' invokeAction='testAction'}}
-Link to other route
+  Link to other route
 {{/link-to}}
 ```
 
