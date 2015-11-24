@@ -1,30 +1,8 @@
 import Ember from 'ember';
+import LinkActionMixin from '../mixins/link-action';
 
 export function initialize() {
-  Ember.LinkComponent.reopen({
-    _sendInvokeAction() {
-      this.sendAction('invokeAction');
-    },
-
-    init() {
-      this._super(...arguments);
-
-      // Map desired event name to invoke function
-      const eventName = this.get('eventName');
-
-      if (this.get('invokeAction')) {
-        this.on(eventName, this, this._sendInvokeAction);
-      }
-
-      this.on(eventName, this, this._invoke);
-    },
-
-    willDestroyElement() {
-      if (this.get('invokeAction')) {
-        this.off(this.get('eventName'), this, this._sendInvokeAction);
-      }
-    }
-  });
+  Ember.LinkComponent.reopen(LinkActionMixin);
 }
 
 export default {
