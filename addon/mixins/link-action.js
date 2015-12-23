@@ -5,7 +5,7 @@ export default Ember.Mixin.create({
     this.sendAction('invokeAction');
   },
 
-  init() {
+  didInitAttrs() {
     this._super(...arguments);
 
     // Map desired event name to invoke function
@@ -15,7 +15,6 @@ export default Ember.Mixin.create({
       this.on(eventName, this, this._sendInvokeAction);
     }
 
-    this.on(eventName, this, this._invoke);
   },
 
   willDestroyElement() {
