@@ -3,8 +3,7 @@
 import Ember from 'ember';
 import { test } from 'qunit';
 import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
-
-const precompileTemplate = Ember.HTMLBars.compile;
+import hbs from 'htmlbars-inline-precompile';
 
 moduleForAcceptance('Acceptance | link action');
 
@@ -23,11 +22,11 @@ test('clicking {{link-to}} with closure action specified correctly transition to
     }
   }));
 
-  registry.register('template:link-action', precompileTemplate(`
+  registry.register('template:link-action', hbs`
     {{#link-to 'other-route' invokeAction=(action 'testAction')}}
       Link to other route
     {{/link-to}}
-  `));
+  `);
 
   visit('/link-action');
 
@@ -51,11 +50,11 @@ test('clicking {{link-to}} with action name specified correctly transition to ot
     }
   }));
 
-  registry.register('template:link-action', precompileTemplate(`
+  registry.register('template:link-action', hbs`
     {{#link-to 'other-route' invokeAction='testAction'}}
       Link to other route
     {{/link-to}}
-  `));
+  `);
 
   visit('/link-action');
 
@@ -84,11 +83,11 @@ test('action parameters can be passed to invoked action', assert => {
     }
   }));
 
-  registry.register('template:link-action', precompileTemplate(`
+  registry.register('template:link-action', hbs`
     {{#link-to 'other-route' invokeAction=(action 'testAction' 'value1' 'value2')}}
       Link to other route
     {{/link-to}}
-  `));
+  `);
 
   visit('/link-action');
 
