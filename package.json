@@ -41,7 +41,14 @@
     "handlebars": "^1.3.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember",
+    "kuzirashi",
+    "daniel",
+    "kmak",
+    "link",
+    "action",
+    "addon"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5"

@@ -32,13 +32,7 @@ To pass parameters to action you can use:
 
 # Compatibility
 
-Confirmed that it works with release, beta, canary Ember versions:
-
-- 2.0.2
-- 2.1.1
-- 2.2.0
-- 2.3.0-beta.3
-- 2.4.0-canary+c8ce20b704
+Addon works with `>= 2.0` versions of Ember. Tests confirm that it works as expected with release, beta and canary.
 
 # Installation
 
