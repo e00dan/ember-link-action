@@ -1,20 +1,12 @@
 /* global getRegistry */
 
 import Ember from 'ember';
-import { module, test } from 'qunit';
-import startApp from '../../tests/helpers/start-app';
+import { test } from 'qunit';
+import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 
 const precompileTemplate = Ember.HTMLBars.compile;
 
-module('Acceptance | link action', {
-  beforeEach() {
-    this.application = startApp();
-  },
-
-  afterEach() {
-    Ember.run(this.application, 'destroy');
-  }
-});
+moduleForAcceptance('Acceptance | link action');
 
 Ember.Test.registerHelper('getRegistry', app => app.registry);
 
