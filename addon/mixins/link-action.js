@@ -1,25 +1,28 @@
 import Ember from 'ember';
 
-export default Ember.Mixin.create({
-  _sendInvokeAction() {
-    this.sendAction('invokeAction');
-  },
+const { Mixin } = Ember;
 
+export default Mixin.create({
   init() {
     this._super(...arguments);
 
-    // Map desired event name to invoke function
-    const eventName = this.get('eventName');
-
     if (this.get('invokeAction')) {
-      this.on(eventName, this, this._sendInvokeAction);
+      this._attachActionEvent();
     }
-
   },
-
   willDestroyElement() {
     if (this.get('invokeAction')) {
-      this.off(this.get('eventName'), this, this._sendInvokeAction);
+      this._detachActionEvent();
     }
+  },
+
+  _sendInvokeAction() {
+    this.sendAction('invokeAction');
+  },
+  _attachActionEvent() {
+    this.on(this.get('eventName'), this, this._sendInvokeAction);
+  },
+  _detachActionEvent() {
+    this.off(this.get('eventName'), this, this._sendInvokeAction);
   }
 });
