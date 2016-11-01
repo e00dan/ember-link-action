@@ -16,7 +16,7 @@
     "url": "https://github.com/Kuzirashi/ember-link-action.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4"
   },
   "author": "Daniel 'Kuzirashi' Kmak",
   "license": "MIT",
