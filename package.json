@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
-    "ember-cli": "2.12.2",
+    "ember-cli": "2.12.3",
     "ember-ajax": "^3.0.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-dependency-checker": "^1.2.0",
