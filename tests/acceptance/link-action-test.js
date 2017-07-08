@@ -15,7 +15,7 @@ test('clicking {{link-to}} with closure action specified correctly transition to
   application.register('controller:link-action', Controller.extend({
     actions: {
       testAction() {
-        assert.ok('test action fired');
+        assert.ok('Test action fired.');
       }
     }
   }));
@@ -43,7 +43,7 @@ test('clicking {{link-to}} with action name specified correctly transition to ot
   application.register('controller:link-action', Controller.extend({
     actions: {
       testAction() {
-        assert.ok('test action fired');
+        assert.ok('Test action fired.');
       }
     }
   }));
@@ -55,7 +55,7 @@ test('clicking {{link-to}} with action name specified correctly transition to ot
   `);
 
   visit('/link-action');
-  
+
   andThen(() => assert.equal(currentURL(), '/link-action'));
 
   click('a');
