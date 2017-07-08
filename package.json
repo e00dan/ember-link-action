@@ -1,6 +1,6 @@
 {
   "name": "ember-link-action",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "description": "An Ember CLI addon. Allows to combine `{{link-to}}` helper with firing an action.",
   "directories": {
     "doc": "doc",
