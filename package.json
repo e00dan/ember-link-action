@@ -15,34 +15,32 @@
     "type": "git",
     "url": "https://github.com/Kuzirashi/ember-link-action.git"
   },
-  "engines": {
-    "node": ">= 4"
-  },
-  "author": "Daniel 'Kuzirashi' Kmak",
+  "author": "Daniel Kmak",
   "license": "MIT",
   "devDependencies": {
-    "broccoli-asset-rev": "^2.4.2",
-    "ember-cli": "2.13.0",
+    "broccoli-asset-rev": "^2.5.0",
     "ember-ajax": "^3.0.0",
+    "ember-cli": "2.14.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-dependency-checker": "^2.0.0",
-    "ember-cli-htmlbars": "^1.0.3",
-    "ember-cli-htmlbars-inline-precompile": "^0.4.0",
-    "ember-cli-inject-live-reload": "^1.4.0",
+    "ember-cli-eslint": "^3.0.0",
+    "ember-cli-htmlbars": "^2.0.2",
+    "ember-cli-htmlbars-inline-precompile": "^0.4.3",
+    "ember-cli-inject-live-reload": "^1.6.1",
     "ember-cli-qunit": "^4.0.0",
-    "ember-cli-release": "^0.2.9",
+    "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.1",
-    "ember-cli-test-loader": "^2.0.0",
+    "ember-cli-test-loader": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
+    "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
-    "ember-resolver": "^4.0.0",
-    "ember-disable-prototype-extensions": "^1.1.0",
-    "ember-cli-jshint": "^2.0.1",
-    "loader.js": "^4.2.0"
+    "ember-resolver": "^4.2.1",
+    "ember-source": "~2.14.0",
+    "loader.js": "^4.5.1"
   },
-  "dependencies": {
-    "ember-cli-babel": "^6.1.0"
+  "engines": {
+    "node": "^4.5 || 6.* || >= 7.*"
   },
   "keywords": [
     "ember-addon",
@@ -52,9 +50,13 @@
     "kmak",
     "link",
     "action",
-    "addon"
+    "addon",
+    "combine"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "dependencies": {
+    "ember-cli-babel": "^6.6.0"
   }
 }
