@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import LinkComponent from '@ember/routing/link-component';
 import LinkActionMixin from '../mixins/link-action';
-
-const { LinkComponent } = Ember;
 
 export function initialize() {
   LinkComponent.reopen(LinkActionMixin);
