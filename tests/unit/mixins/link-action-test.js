@@ -13,7 +13,7 @@ module('Unit | Mixin | link action', function() {
     assert.ok(subject);
   });
 
-  test('_sendInvokeAction sends `invokeAction` action', function(assert) {
+  test('_sendInvokeAction sends `invokeAction` string action', function(assert) {
     assert.expect(2);
 
     const EXPECTED_ACTION_NAME = 'invokeAction';
@@ -25,6 +25,20 @@ module('Unit | Mixin | link action', function() {
         assert.equal(actionName, EXPECTED_ACTION_NAME);
       }
     });
+
+    subject.invokeAction = EXPECTED_ACTION_NAME;
+    subject._sendInvokeAction();
+  });
+
+  test('_sendInvokeAction sends `invokeAction` closure action', function(assert) {
+    assert.expect(1);
+
+    const LinkActionObject = EmberObject.extend(LinkActionMixin);
+    const subject = LinkActionObject.create();
+
+    subject.invokeAction = () => {
+      assert.ok(true, 'closure action was called');
+    };
 
     subject._sendInvokeAction();
   });
