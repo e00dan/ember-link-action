@@ -15,7 +15,11 @@ export default Mixin.create({
   },
 
   _sendInvokeAction() {
-    this.sendAction('invokeAction');
+    if (typeof(this.invokeAction) === 'function') {
+      this.invokeAction();
+    } else if (typeof(this.invokeAction) === 'string') {
+      this.sendAction('invokeAction');
+    }
   },
   _attachActionEvent() {
     this.on(this.get('eventName'), this, this._sendInvokeAction);
