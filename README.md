@@ -19,14 +19,6 @@ You can pass closure action as `invokeAction` attribute of `{{link-to}}` compone
 {{/link-to}}
 ```
 
-You can also use string name instead of closure action:
-
-``` hbs
-{{#link-to 'other-route' invokeAction='testAction'}}
-  Link to other route
-{{/link-to}}
-```
-
 To pass parameters to action you can use:
 
 ``` hbs
