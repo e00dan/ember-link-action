@@ -45,32 +45,6 @@ module('Acceptance | link actions test', function(hooks) {
     assert.equal(currentURL(), '/other-route');
   });
 
-  test('clicking {{link-to}} with action name specified correctly transition to other route and triggers an action', async function(assert) {
-    assert.expect(3);
-
-    cleanRegister(this, 'controller:link-action', Controller.extend({
-      actions: {
-        testAction() {
-          assert.ok('Test action fired.');
-        }
-      }
-    }));
-
-    cleanRegister(this, 'template:link-action', hbs`
-      {{#link-to 'other-route' invokeAction='testAction'}}
-        Link to other route
-      {{/link-to}}
-    `);
-
-    await visit('/link-action');
-
-    assert.equal(currentURL(), '/link-action');
-
-    await click('a');
-
-    assert.equal(currentURL(), '/other-route');
-  });
-
   test('action parameters can be passed to invoked action', async function(assert) {
     assert.expect(2);
 
