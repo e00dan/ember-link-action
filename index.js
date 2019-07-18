@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-link-action'
+  name: require('./package').name
 };
