@@ -2,8 +2,6 @@ Ember Link Action
 ==============================================================================
 [![Build Status](https://travis-ci.org/Kuzirashi/ember-link-action.svg?branch=master)](https://travis-ci.org/Kuzirashi/ember-link-action) [![npm version](https://badge.fury.io/js/ember-link-action.svg)](https://badge.fury.io/js/ember-link-action) [![Ember Observer Score](http://emberobserver.com/badges/ember-link-action.svg)](http://emberobserver.com/addons/ember-link-action) [![Greenkeeper badge](https://badges.greenkeeper.io/Kuzirashi/ember-link-action.svg)](https://greenkeeper.io/)
 
-[Short description of the addon.]
-
 An Ember CLI addon. Allows to combine `{{link-to}}` helper with firing an action.
 
 It is useful when you want to fire an action at the same time when user transitions to other route by clicking `{{link-to}}`. **It is OK for SEO solution.**
