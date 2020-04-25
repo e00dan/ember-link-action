@@ -34,9 +34,11 @@ Compatibility
 * Node.js v6 or above
 
 
-Addon works with `>= 3.0`, `>= 2.0` versions of Ember. Tests confirm that it works as expected with release, beta and canary.
+Latest addon version works with `>= 3.0` versions of Ember. For more info check test scenarios on CI or `travis.yml`.
 
-For `1.13.13` compatibility use tested version: `0.0.37`. In other cases - use the latest version.
+For `>= 2.0.0 AND < 3` compatibility use tested version: `1.0.0`.
+
+For `1.13.13` compatibility use tested version: `0.0.37`.
 
 Installation
 ------------------------------------------------------------------------------
