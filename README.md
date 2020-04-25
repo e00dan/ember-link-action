@@ -29,9 +29,9 @@ Compatibility
 ------------------------------------------------------------------------------
 
 
-* Ember.js v2.12 or above
-* Ember CLI v2.12 or above
-* Node.js v6 or above
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
 
 
 Latest addon version works with `>= 3.0` versions of Ember. For more info check test scenarios on CI or `travis.yml`.
