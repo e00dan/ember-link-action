@@ -4,12 +4,12 @@ export default Mixin.create({
   init() {
     this._super(...arguments);
 
-    if (this.get('invokeAction')) {
+    if (this.invokeAction) {
       this._attachActionEvent();
     }
   },
   willDestroyElement() {
-    if (this.get('invokeAction')) {
+    if (this.invokeAction) {
       this._detachActionEvent();
     }
   },
@@ -18,9 +18,9 @@ export default Mixin.create({
     this.invokeAction();
   },
   _attachActionEvent() {
-    this.on(this.get('eventName'), this, this._sendInvokeAction);
+    this.on(this.eventName, this, this._sendInvokeAction);
   },
   _detachActionEvent() {
-    this.off(this.get('eventName'), this, this._sendInvokeAction);
+    this.off(this.eventName, this, this._sendInvokeAction);
   }
 });
