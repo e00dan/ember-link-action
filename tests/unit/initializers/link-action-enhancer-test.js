@@ -1,13 +1,13 @@
 import EmberObject from '@ember/object';
 import Evented from '@ember/object/evented';
-import LinkActionMixin from 'ember-link-action/mixins/link-action';
 import { module, test } from 'qunit';
+import { LinkActionOverride } from 'ember-link-action/initializers/link-action-enhancer';
 
-module('Unit | Mixin | link action', function() {
+module('Unit | Initializers | Link action enhancer', function() {
   test('it exists', function(assert) {
     assert.expect(1);
 
-    const LinkActionObject = EmberObject.extend(LinkActionMixin);
+    const LinkActionObject = EmberObject.extend(LinkActionOverride);
     const subject = LinkActionObject.create();
 
     assert.ok(subject);
@@ -16,7 +16,7 @@ module('Unit | Mixin | link action', function() {
   test('_sendInvokeAction sends `invokeAction` closure action', function(assert) {
     assert.expect(1);
 
-    const LinkActionObject = EmberObject.extend(LinkActionMixin);
+    const LinkActionObject = EmberObject.extend(LinkActionOverride);
     const subject = LinkActionObject.create();
 
     subject.invokeAction = () => {
@@ -29,7 +29,7 @@ module('Unit | Mixin | link action', function() {
   test('_attachActionEvent is called on initialization if invokeAction is specified', function(assert) {
     assert.expect(1);
 
-    const LinkActionObject = EmberObject.extend(LinkActionMixin);
+    const LinkActionObject = EmberObject.extend(LinkActionOverride);
 
     LinkActionObject.create({
       invokeAction: 'someAction',
@@ -42,7 +42,7 @@ module('Unit | Mixin | link action', function() {
   test('_detachActionEvent is called when willDestroyElement is called and invokeAction is specified', function(assert) {
     assert.expect(1);
 
-    const LinkActionObject = EmberObject.extend(LinkActionMixin);
+    const LinkActionObject = EmberObject.extend(LinkActionOverride);
     const subject = LinkActionObject.create({
       invokeAction: 'someAction',
       _attachActionEvent() {},
@@ -59,7 +59,7 @@ module('Unit | Mixin | link action', function() {
 
     const EXAMPLE_EVENT_NAME = 'click';
 
-    const LinkActionObject = EmberObject.extend(LinkActionMixin, Evented);
+    const LinkActionObject = EmberObject.extend(LinkActionOverride, Evented);
     const subject = LinkActionObject.create({
       eventName: EXAMPLE_EVENT_NAME,
       _sendInvokeAction() {
@@ -79,7 +79,7 @@ module('Unit | Mixin | link action', function() {
 
     const EXAMPLE_EVENT_NAME = 'click';
 
-    const LinkActionObject = EmberObject.extend(LinkActionMixin, Evented);
+    const LinkActionObject = EmberObject.extend(LinkActionOverride, Evented);
     const subject = LinkActionObject.create({
       eventName: EXAMPLE_EVENT_NAME,
       _sendInvokeAction() {
