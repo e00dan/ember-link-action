@@ -1,6 +1,6 @@
-import Mixin from '@ember/object/mixin';
+import LinkComponent from '@ember/routing/link-component';
 
-export default Mixin.create({
+export const LinkActionOverride = {
   init() {
     this._super(...arguments);
 
@@ -23,4 +23,13 @@ export default Mixin.create({
   _detachActionEvent() {
     this.off(this.eventName, this, this._sendInvokeAction);
   }
-});
+};
+
+export function initialize() {
+  LinkComponent.reopen(LinkActionOverride);
+}
+
+export default {
+  name: 'link-action-enhancer',
+  initialize
+};
