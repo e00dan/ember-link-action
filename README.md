@@ -2,26 +2,40 @@ Ember Link Action
 ==============================================================================
 [![Build Status](https://travis-ci.org/Kuzirashi/ember-link-action.svg?branch=master)](https://travis-ci.org/Kuzirashi/ember-link-action) [![npm version](https://badge.fury.io/js/ember-link-action.svg)](https://badge.fury.io/js/ember-link-action) [![Ember Observer Score](http://emberobserver.com/badges/ember-link-action.svg)](http://emberobserver.com/addons/ember-link-action)
 
-An Ember CLI addon. Allows to combine `{{link-to}}` helper with firing an action.
-
-It is useful when you want to fire an action at the same time when user transitions to other route by clicking `{{link-to}}`. **It is OK for SEO solution.**
+Ember addon. Fire action when `LinkTo` transitions to other route. **OK for SEO solution.**
 
 Usage
 ------------------------------------------------------------------------------
 
+### Octane
+
+You can pass an action as `@invokeAction` attribute of `LinkTo` component:
+
+``` hbs
+<LinkTo @route='cart' @invokeAction={{this.testAction}}>Cart</LinkTo>
+```
+
+``` hbs
+<LinkTo @route='cart' @invokeAction={{fn this.testAction 'value1' 'value2'}}>
+  Cart
+</LinkTo>
+```
+
+### Classic
+
 You can pass closure action as `invokeAction` attribute of `{{link-to}}` component:
 
 ``` hbs
-{{#link-to 'other-route' invokeAction=(action 'testAction')}}
-  Link to other route
+{{#link-to 'cart' invokeAction=(action 'testAction')}}
+  Cart
 {{/link-to}}
 ```
 
 To pass parameters to action you can use:
 
 ``` hbs
-{{#link-to 'other-route' invokeAction=(action 'testAction' param1 param2)}}
-  Link to other route
+{{#link-to 'cart' invokeAction=(action 'testAction' param1 param2)}}
+  Cart
 {{/link-to}}
 ```
 
@@ -33,8 +47,9 @@ Compatibility
 * Ember CLI v2.13 or above
 * Node.js v10 or above
 
+This addon supports [Embroider](https://github.com/embroider-build/embroider/).
 
-Latest addon version works with `>= 3.0` versions of Ember. For more info check test scenarios on CI or `travis.yml`.
+Most recent versions work with `>= 3.0` versions of Ember. For more info check test scenarios in `travis.yml`.
 
 For `>= 2.0.0 AND < 3` compatibility use tested version: `1.0.0`.
 
