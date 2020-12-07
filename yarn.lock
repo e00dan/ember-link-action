@@ -4833,10 +4833,10 @@ ember-maybe-import-regenerator@0.1.6:
     ember-cli-babel "^6.0.0-beta.4"
     regenerator-runtime "^0.9.5"
 
-ember-qunit@5.0.0-beta.5:
-  version "5.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/ember-qunit/-/ember-qunit-5.0.0-beta.5.tgz#f46163c25bad458b8c52fce16258302837eb9b7e"
-  integrity sha512-kRRjpAlIgqsR7HKX+/oEmRMJsNYFD/iXKYPYwgj/38CTMd8G3hZKb4urJa7O4YEZP89+kaLrf2WK2FYx6WLhgQ==
+ember-qunit@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/ember-qunit/-/ember-qunit-5.1.0.tgz#4e75aa91b0bb190e1dc3ffb939e2b81bb06cd642"
+  integrity sha512-a2kb85CD49gMgl4HFJjo5N5lgX4He7zOL5VSYQzOFU7LEauVjOsOyDGqI5rYmtMoC5LpWM2KNnCxODZsGE1uVA==
   dependencies:
     broccoli-funnel "^3.0.3"
     broccoli-merge-trees "^3.0.2"
