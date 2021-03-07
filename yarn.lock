@@ -5257,10 +5257,10 @@ ember-source@3.25.1:
     semver "^6.1.1"
     silent-error "^1.1.1"
 
-ember-template-lint@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-3.0.1.tgz#f981f38660d875966ea548a85b874fa278b1787e"
-  integrity sha512-5g7/9wHahDl6DxaZdbJL9w/03Rb5WCwu5FDsVAFNRpPrmiKOaUVIv9UHyqdZCPDVLEot4oHj8FxnwK+yvXt07w==
+ember-template-lint@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-3.1.0.tgz#3f634c733ac5e4b19d8ad782b653b02da04910cd"
+  integrity sha512-muGPBr71ZfesSxYtm6lLqbO3mpGh8JJnamqByPdN474/7MNexWGvmWDvV7bklrQ7UOoZ66Miu/0WRb9PYPrX9w==
   dependencies:
     "@ember-template-lint/todo-utils" "^8.0.0-beta.3"
     chalk "^4.0.0"
