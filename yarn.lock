@@ -138,7 +138,7 @@
     browserslist "^4.14.5"
     semver "^6.3.0"
 
-"@babel/helper-create-class-features-plugin@^7.12.1", "@babel/helper-create-class-features-plugin@^7.5.5", "@babel/helper-create-class-features-plugin@^7.8.3":
+"@babel/helper-create-class-features-plugin@^7.12.1", "@babel/helper-create-class-features-plugin@^7.5.5":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.12.1.tgz#3c45998f431edd4a9214c5f1d3ad1448a6137f6e"
   integrity sha512-hkL++rWeta/OVOBTRJc9a5Azh5mt5WgZUGAKMD8JM141YsE08K//bp1unBBieO6rUKkIPyUE0USQ30jAy3Sk1w==
@@ -579,7 +579,7 @@
     "@babel/helper-plugin-utils" "^7.10.4"
     "@babel/plugin-syntax-logical-assignment-operators" "^7.10.4"
 
-"@babel/plugin-proposal-nullish-coalescing-operator@^7.12.1", "@babel/plugin-proposal-nullish-coalescing-operator@^7.4.4":
+"@babel/plugin-proposal-nullish-coalescing-operator@^7.12.1":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-nullish-coalescing-operator/-/plugin-proposal-nullish-coalescing-operator-7.12.1.tgz#3ed4fff31c015e7f3f1467f190dbe545cd7b046c"
   integrity sha512-nZY0ESiaQDI1y96+jk6VxMOaL4LPo/QDHBqL+SF3/vl6dHkTwHlOI8L4ZwuRBHgakRBw5zsVylel7QPbbGuYgg==
@@ -612,7 +612,7 @@
     "@babel/helper-plugin-utils" "^7.10.4"
     "@babel/plugin-syntax-optional-catch-binding" "^7.8.0"
 
-"@babel/plugin-proposal-optional-chaining@^7.12.1", "@babel/plugin-proposal-optional-chaining@^7.6.0":
+"@babel/plugin-proposal-optional-chaining@^7.12.1":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.12.1.tgz#cce122203fc8a32794296fc377c6dedaf4363797"
   integrity sha512-c2uRpY6WzaVDzynVY9liyykS+kVU+WRZPMPYpkelXH8KBt1oXoI89kPbZKKG/jDT5UK92FTW2fZkZaJhdiBabw==
@@ -735,7 +735,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-syntax-typescript@^7.12.1", "@babel/plugin-syntax-typescript@^7.2.0", "@babel/plugin-syntax-typescript@^7.8.3":
+"@babel/plugin-syntax-typescript@^7.12.1", "@babel/plugin-syntax-typescript@^7.2.0":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.12.1.tgz#460ba9d77077653803c3dd2e673f76d66b4029e5"
   integrity sha512-UZNEcCY+4Dp9yYRCAHrHDU+9ZXLYaY9MgBXSRLkB9WjYFRR6quJBumfVrEkUxrePPBwFcpWfNKXqVRQQtm7mMA==
@@ -1057,15 +1057,6 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-typescript" "^7.2.0"
 
-"@babel/plugin-transform-typescript@~7.8.0":
-  version "7.8.7"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.8.7.tgz#48bccff331108a7b3a28c3a4adc89e036dc3efda"
-  integrity sha512-7O0UsPQVNKqpHeHLpfvOG4uXmlw+MOxYvUv6Otc9uH5SYMIxvF6eBdjkWvC3f9G+VXe0RsNExyAQBeTRug/wqQ==
-  dependencies:
-    "@babel/helper-create-class-features-plugin" "^7.8.3"
-    "@babel/helper-plugin-utils" "^7.8.3"
-    "@babel/plugin-syntax-typescript" "^7.8.3"
-
 "@babel/plugin-transform-unicode-escapes@^7.12.1":
   version "7.12.1"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-unicode-escapes/-/plugin-transform-unicode-escapes-7.12.1.tgz#5232b9f81ccb07070b7c3c36c67a1b78f1845709"
@@ -1323,26 +1314,26 @@
     mkdirp "^1.0.4"
     silent-error "^1.1.1"
 
-"@ember/test-helpers@2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-2.2.3.tgz#237c2de48a9e85492374b91e825cb142675858cc"
-  integrity sha512-qpLz0wwHrY49JzmS2qznpEjrfZUhrWemgSXu48xgJAZnjXBa52libZgl7mzwnHmmo4YtUBgQtJSRPUp/coYFNA==
+"@ember/test-helpers@2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@ember/test-helpers/-/test-helpers-2.2.4.tgz#6e3619c86726f84d901ceff035342066605a3f15"
+  integrity sha512-/LADeLFJYGA9E3kwRR0L9OPRZG3nwM9ib3m98/xltG52kS4Ubni0uvyM1hqoZP8aahCEpj/RXU9FNYmrSogqwg==
   dependencies:
-    "@ember/test-waiters" "^2.4.0"
+    "@ember/test-waiters" "^2.4.2"
     broccoli-debug "^0.6.5"
     broccoli-funnel "^3.0.3"
-    ember-cli-babel "^7.23.1"
-    ember-cli-htmlbars "^5.2.0"
+    ember-cli-babel "^7.26.1"
+    ember-cli-htmlbars "^5.7.1"
     ember-destroyable-polyfill "^2.0.3"
 
-"@ember/test-waiters@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@ember/test-waiters/-/test-waiters-2.4.0.tgz#af92324d03a8840eff7a9ea3e9015138e0c477ed"
-  integrity sha512-P1c0dmbNx7I+wM37nCs3lRiDoGYvcg0s2L3Y/75izj48iYT1/7Vxr3eFkZ7AShuCa7SBMRoH2mHOVsqLDBJ3hA==
+"@ember/test-waiters@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@ember/test-waiters/-/test-waiters-2.4.2.tgz#28e38d00edc96bcdc8c42592933d8f1b4171d1a1"
+  integrity sha512-WNbprLvC5PsgjnoX0cWa5/2dP3sbDDLjc6JYNUfrFlmZfsuKU9/+Ioyi0V6cx9mzpWLdfkSZMW+bw/rItjPKVg==
   dependencies:
     calculate-cache-key-for-tree "^2.0.0"
-    ember-cli-babel "^7.21.0"
-    ember-cli-typescript "^3.1.4"
+    ember-cli-babel "^7.23.1"
+    ember-cli-typescript "^4.1.0"
     ember-cli-version-checker "^5.1.2"
     semver "^7.3.2"
 
@@ -2600,11 +2591,6 @@ babel-plugin-filter-imports@^4.0.0:
     "@babel/types" "^7.7.2"
     lodash "^4.17.15"
 
-babel-plugin-htmlbars-inline-precompile@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-htmlbars-inline-precompile/-/babel-plugin-htmlbars-inline-precompile-4.2.0.tgz#73e7a199c14db139b9c9aea240e03b7112784c81"
-  integrity sha512-n2jMGcFKvubnYi8Ink7zJnC+aQor97v5FJKYUOUKijj5gIDy/sOIAZ7BxDWb0co1VzZokdN7tvtLnQtiWfD1Gw==
-
 babel-plugin-htmlbars-inline-precompile@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-htmlbars-inline-precompile/-/babel-plugin-htmlbars-inline-precompile-5.0.0.tgz#b3a3008bdedbd3543e745fc953769cc10d4a7021"
@@ -3582,7 +3568,7 @@ broccoli-persistent-filter@^2.2.1, broccoli-persistent-filter@^2.3.0:
     sync-disk-cache "^1.3.3"
     walk-sync "^1.0.0"
 
-broccoli-persistent-filter@^3.1.0, broccoli-persistent-filter@^3.1.2:
+broccoli-persistent-filter@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/broccoli-persistent-filter/-/broccoli-persistent-filter-3.1.2.tgz#41da6b9577be09a170ecde185f2c5a6099f99c4e"
   integrity sha512-CbU95RXXVyy+eJV9XTiHUC7NnsY3EvdVrGzp3YgyvO2bzXZFE5/GzDp4X/VQqX+jsk4qyT1HvMOF0sD1DX68TQ==
@@ -4981,12 +4967,12 @@ ember-auto-import@1.10.1, ember-auto-import@^1.10.1:
     walk-sync "^0.3.3"
     webpack "^4.43.0"
 
-ember-cli-babel-plugin-helpers@^1.0.0, ember-cli-babel-plugin-helpers@^1.1.0, ember-cli-babel-plugin-helpers@^1.1.1:
+ember-cli-babel-plugin-helpers@^1.0.0, ember-cli-babel-plugin-helpers@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ember-cli-babel-plugin-helpers/-/ember-cli-babel-plugin-helpers-1.1.1.tgz#5016b80cdef37036c4282eef2d863e1d73576879"
   integrity sha512-sKvOiPNHr5F/60NLd7SFzMpYPte/nnGkq/tMIfXejfKHIhaiIkYFqX8Z9UFTKWLLn+V7NOaby6niNPZUdvKCRw==
 
-ember-cli-babel@7.26.1:
+ember-cli-babel@7.26.1, ember-cli-babel@^7.26.1:
   version "7.26.1"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.26.1.tgz#d3f06bd9aec8aac9197c5ff4d0b87ff1e4f0d62a"
   integrity sha512-WEWP3hJSe9CWL22gEWQ+Y3uKMGk1vLoIREUQfJNKrgUUh3l49bnfAamh3ywcAQz31IgzvkLPO8ZTXO4rxnuP4Q==
@@ -5038,7 +5024,7 @@ ember-cli-babel@^6.0.0-beta.4:
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-babel@^7.0.0, ember-cli-babel@^7.13.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.21.0, ember-cli-babel@^7.22.1, ember-cli-babel@^7.23.0, ember-cli-babel@^7.7.3:
+ember-cli-babel@^7.0.0, ember-cli-babel@^7.13.0, ember-cli-babel@^7.13.2, ember-cli-babel@^7.22.1, ember-cli-babel@^7.23.0, ember-cli-babel@^7.7.3:
   version "7.23.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.23.0.tgz#ec580aa2c115d0810e454dd5c2fffce238284b92"
   integrity sha512-ix58DlRDAbGITtdJoRUPcAoQwKLYr/x/kIXjU9u1ATyhmuUjqb+0FDXghOWbkNihGiNOqBBR49+LBgK9AeBcNw==
@@ -5118,7 +5104,7 @@ ember-cli-get-component-path-option@^1.0.0:
   resolved "https://registry.yarnpkg.com/ember-cli-get-component-path-option/-/ember-cli-get-component-path-option-1.0.0.tgz#0d7b595559e2f9050abed804f1d8eff1b08bc771"
   integrity sha1-DXtZVVni+QUKvtgE8djv8bCLx3E=
 
-ember-cli-htmlbars@5.7.1:
+ember-cli-htmlbars@5.7.1, ember-cli-htmlbars@^5.7.1:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-5.7.1.tgz#eb5b88c7d9083bc27665fb5447a9b7503b32ce4f"
   integrity sha512-9laCgL4tSy48orNoQgQKEHp93MaqAs9ZOl7or5q+8iyGGJHW6sVXIYrVv5/5O9HfV6Ts8/pW1rSoaeKyLUE+oA==
@@ -5136,27 +5122,6 @@ ember-cli-htmlbars@5.7.1:
     heimdalljs-logger "^0.1.10"
     json-stable-stringify "^1.0.1"
     semver "^7.3.4"
-    silent-error "^1.1.1"
-    strip-bom "^4.0.0"
-    walk-sync "^2.2.0"
-
-ember-cli-htmlbars@^5.2.0:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-5.3.1.tgz#61793964fc2599ce750db9e972ab55c6dd177c48"
-  integrity sha512-ZjQTt44euDoqLvUkWbt1svgNCXgLzOztEbc2qqYMQvhQig416LMrWK7l3SSbNU+BtLD5UIxmwvLfF1tsO2CVyA==
-  dependencies:
-    "@ember/edition-utils" "^1.2.0"
-    babel-plugin-htmlbars-inline-precompile "^4.2.0"
-    broccoli-debug "^0.6.5"
-    broccoli-persistent-filter "^3.1.0"
-    broccoli-plugin "^4.0.3"
-    common-tags "^1.8.0"
-    ember-cli-babel-plugin-helpers "^1.1.0"
-    fs-tree-diff "^2.0.1"
-    hash-for-dep "^1.5.1"
-    heimdalljs-logger "^0.1.10"
-    json-stable-stringify "^1.0.1"
-    semver "^7.3.2"
     silent-error "^1.1.1"
     strip-bom "^4.0.0"
     walk-sync "^2.2.0"
@@ -5262,25 +5227,21 @@ ember-cli-typescript@^2.0.2:
     stagehand "^1.0.0"
     walk-sync "^1.0.0"
 
-ember-cli-typescript@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/ember-cli-typescript/-/ember-cli-typescript-3.1.4.tgz#21d6ccd670d1f2e34c9cce68c6e32c442f46806b"
-  integrity sha512-HJ73kL45OGRmIkPhBNFt31I1SGUvdZND+LCH21+qpq3pPlFpJG8GORyXpP+2ze8PbnITNLzwe5AwUrpyuRswdQ==
+ember-cli-typescript@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-typescript/-/ember-cli-typescript-4.1.0.tgz#2ff17be2e6d26b58c88b1764cb73887e7176618b"
+  integrity sha512-zSuKG8IQuYE3vS+c7V0mHJqwrN/4Wo9Wr50+0NUjnZH3P99ChynczQHu/P7WSifkO6pF6jaxwzf09XzWvG8sVw==
   dependencies:
-    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.4.4"
-    "@babel/plugin-proposal-optional-chaining" "^7.6.0"
-    "@babel/plugin-transform-typescript" "~7.8.0"
     ansi-to-html "^0.6.6"
     broccoli-stew "^3.0.0"
     debug "^4.0.0"
-    ember-cli-babel-plugin-helpers "^1.0.0"
-    execa "^3.0.0"
-    fs-extra "^8.0.0"
+    execa "^4.0.0"
+    fs-extra "^9.0.1"
     resolve "^1.5.0"
     rsvp "^4.8.1"
-    semver "^6.3.0"
+    semver "^7.3.2"
     stagehand "^1.0.0"
-    walk-sync "^2.0.0"
+    walk-sync "^2.2.0"
 
 ember-cli-version-checker@^2.1.1, ember-cli-version-checker@^2.1.2:
   version "2.2.0"
@@ -6056,23 +6017,7 @@ execa@^2.0.0:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
-execa@^3.0.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/execa/-/execa-3.4.0.tgz#c08ed4550ef65d858fac269ffc8572446f37eb89"
-  integrity sha512-r9vdGQk4bmCuK1yKQu1KTwcT2zwfWdbdaXfCtAh+5nU/4fSX+JAb7vZGvI5naJrQlvONrEB20jeruESI69530g==
-  dependencies:
-    cross-spawn "^7.0.0"
-    get-stream "^5.0.0"
-    human-signals "^1.1.1"
-    is-stream "^2.0.0"
-    merge-stream "^2.0.0"
-    npm-run-path "^4.0.0"
-    onetime "^5.1.0"
-    p-finally "^2.0.0"
-    signal-exit "^3.0.2"
-    strip-final-newline "^2.0.0"
-
-execa@^4.1.0:
+execa@^4.0.0, execa@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-4.1.0.tgz#4e5491ad1572f2f17a77d388c6c857135b22847a"
   integrity sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==
