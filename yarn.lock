@@ -3329,6 +3329,23 @@ broccoli-concat@^4.2.4:
     lodash.omit "^4.1.0"
     lodash.uniq "^4.2.0"
 
+broccoli-concat@^4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/broccoli-concat/-/broccoli-concat-4.2.5.tgz#d578f00094048b5fc87195e82fbdbde20d838d29"
+  integrity sha512-dFB5ATPwOyV8S2I7a07HxCoutoq23oY//LhM6Mou86cWUTB174rND5aQLR7Fu8FjFFLxoTbkk7y0VPITJ1IQrw==
+  dependencies:
+    broccoli-debug "^0.6.5"
+    broccoli-kitchen-sink-helpers "^0.3.1"
+    broccoli-plugin "^4.0.2"
+    ensure-posix-path "^1.0.2"
+    fast-sourcemap-concat "^2.1.0"
+    find-index "^1.1.0"
+    fs-extra "^8.1.0"
+    fs-tree-diff "^2.0.1"
+    lodash.merge "^4.6.2"
+    lodash.omit "^4.1.0"
+    lodash.uniq "^4.2.0"
+
 broccoli-config-loader@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/broccoli-config-loader/-/broccoli-config-loader-1.0.1.tgz#d10aaf8ebc0cb45c1da5baa82720e1d88d28c80a"
@@ -5359,10 +5376,10 @@ ember-cli-version-checker@^5.1.2:
     semver "^7.3.4"
     silent-error "^1.1.1"
 
-ember-cli@3.26.0:
-  version "3.26.0"
-  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.26.0.tgz#19b3b9701df7ab78a23f7d0f44bf26e78f031f71"
-  integrity sha512-zmwUS1i4w7nFIwNjPLNGPlH0lOZjbOfUt51FQsbS8zqRgbbA/oYGAfpiTzJfO3bONjiKy3irEQIqbdBQaXFA7w==
+ember-cli@3.26.1:
+  version "3.26.1"
+  resolved "https://registry.yarnpkg.com/ember-cli/-/ember-cli-3.26.1.tgz#43e924454f1fcff6157863925d0eb33bfa593c24"
+  integrity sha512-jJ0kMob21A/HIqkDNWQMZnnpadjS/xaBlv1RU1NoCUi+3Lqpt9esDT9cK0QCFp9vh4zfU4BEBNYkMN/SiQMaGg==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-transform-modules-amd" "^7.12.1"
@@ -5374,7 +5391,7 @@ ember-cli@3.26.0:
     broccoli-amd-funnel "^2.0.1"
     broccoli-babel-transpiler "^7.8.0"
     broccoli-builder "^0.18.14"
-    broccoli-concat "^4.2.4"
+    broccoli-concat "^4.2.5"
     broccoli-config-loader "^1.0.1"
     broccoli-config-replace "^1.1.2"
     broccoli-debug "^0.6.5"
